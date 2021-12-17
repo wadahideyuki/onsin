@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ レイアウト
+---------------------------------------*/
+.l-wrapper{
+  background-color: #D6C3AE;
+}
+
+
+.l-cont{
+  
+}
+
+
+.l-fixBtns{
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+  right: 40px;
+  @include pc{
+  }
+  @include mq{
+  }
+  a{
+    display: block;
+    @include hvrBrt;
+    @include pc{
+    }
+    @include mq{
+    }
+    + a{
+      @include pc{
+        margin-left: 15px;
+      }
+      @include mq{
+      }
+    }
+  }
+}
+
+
+.l-footer{
+  padding: 28px 50px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+

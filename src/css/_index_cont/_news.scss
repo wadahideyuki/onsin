@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ メインコンテンツ
+---------------------------------------*/
+
+$name: "news";
+$thisPath: $pathImg + $name + "/";
+
+article:not(.#{$name}Zone){
+//  display: none;
+}
+.#{$name}Zone{
+  background-color: #fff;
+  @include pc{
+    padding: 25px 50px;
+  }
+  @include mq{
+  }
+  dl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include pc{
+    }
+    @include mq{
+    }
+  }
+  dt{
+    color: #C6AC91;
+    font-size: 1.8rem;
+    font-weight: bold;
+    @include pc{
+      margin-right: 36px;
+    }
+    @include mq{
+    }
+  }
+  dd{
+    font-size: 1.6rem;
+    @include pc{
+    }
+    @include mq{
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ メインコンテンツ
+---------------------------------------*/
+
+$name: "main";
+$thisPath: $pathImg + $name + "/";
+
+article:not(.#{$name}Zone){
+//  display: none;
+}
+.#{$name}Zone{
+  display: flex;
+  flex-direction: row-reverse;
+  .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    @include pc{
+//      height: 998px;
+      height: 100vh;
+    }
+    @include mq{
+    }
+    img{
+      max-width: 100%;
+    }
+    &.is_logo{
+      background-image: url($thisPath + "bg_wrap.png");
+      h1{
+        width: percentage(364/700);
+        @include pc{
+          max-width: 364px;
+        }
+      }
+    }//&.is_logo
+    &.is_catch{
+      background-image: url($thisPath + "bg_wrap2.png");
+      h2{
+        width: percentage(433/700);
+        @include pc{
+          max-width: 433px;
+        }
+      }
+    }//&.is_catch
+  }
+}

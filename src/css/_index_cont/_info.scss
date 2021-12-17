@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ cont1
+---------------------------------------*/
+
+$name: "info";
+$thisPath: $pathImg + $name + "/";
+
+article:not(.#{$name}Zone){
+//  display: none;
+}
+.#{$name}Zone{
+  .u-secTtl{
+    @include pc{
+      margin-bottom: -177px;
+      padding-bottom: 243px;
+    }
+    @include mq{
+    }
+  }//.u-secTtl
+  .u-secCont{
+    @include pc{
+      padding-bottom: 17px;
+    }
+    @include mq{
+    }
+    .phts{
+      display: flex;
+      justify-content: center;
+      @include pc{
+        margin-bottom: 64px;
+      }
+      > li{
+        position: relative;
+        @include pc{
+          width: vwL(413);
+        }
+        + li{
+          @include pc{
+            margin-left: vwL(34);
+          }
+        }
+        figure{
+          img{
+            width: 100%;
+            @include pc{
+              border-radius: vwL(15);
+            }
+            @include mq{
+            }
+          }
+        }
+        p{
+          color: #fff;
+          font-size: vwL(23);
+          font-weight: bold;
+          position: absolute;
+          bottom: em(24/23);
+          left: em(38/23);
+          @include mqMaxW(900px){
+          }
+          small{
+            display: block;
+            font-size: em(19/23);
+            font-variant: normal;
+          }
+        }
+      }
+    }//.phts
+    .u-inner{
+      @include pc{
+        max-width: 922px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+    .u-whtBox1{
+      @include pc{
+        display: flex;
+        align-items: flex-start;
+        padding:
+          percentage(35/922)
+          percentage(62/922)
+          percentage(57/922)
+          percentage(69/922);
+      }
+      @include mq{
+      }
+      + .u-whtBox1{
+        @include pc{
+          margin-top: 66px;
+        }
+        @include mq{
+        }
+      }
+      h3{
+        flex-shrink: 0;
+        position: relative;
+        @include pc{
+          font-size: 3.0rem;
+        }
+        @include mq{
+        }
+        &:before{
+          background-image: url($thisPath + "icn_circle.png");
+          width: em(57/30);
+          height: em(57/30);
+          @include pc{
+          }
+          @include mq{
+          }
+        }
+        span{
+          position: absolute;
+          top: em(18/30);
+          left: em(25/30);
+          @include pc{
+          }
+          @include mq{
+          }
+          em{
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            letter-spacing: 0.2em;
+            @include pc{
+            }
+            @include mq{
+            }
+          }
+        }
+      }
+      .cont{
+        width: 100%;
+        font-size: 1.6rem;
+        line-height: (28/16);
+        p{
+          
+        }
+      }//.cont
+      &.is_request{
+        h3{
+          @include pc{
+            margin-right: percentage(80/791);
+          }
+          @include mq{
+          }
+        }
+        .cont{
+          @include pc{
+            padding-top: 15px;
+          }
+          @include mq{
+          }
+          p{
+          }
+          ul{
+            margin: em(23/16) 0 em(38/16);
+            font-weight: bold;
+            line-height: (31/16);
+            li{
+              em{
+                color: #B80000;
+              }
+              small{
+                font-size: em(14/16);
+              }
+            }
+          }
+        }//.cont
+      }//&.is_request
+      &.is_access{
+        h3{
+          @include pc{
+            margin-right: percentage(68/791);
+          }
+          @include mq{
+          }
+        }
+        .cont{
+          display: flex;
+          align-items: flex-start;
+          @include pc{
+            padding-top: 12px;
+          }
+          @include mq{
+          }
+          figure{
+            @include pc{
+              width: percentage(428/666);
+              margin-right: percentage(30/666);
+            }
+          }
+          .txts{
+            p{
+              em{
+                font-size: em(18/16);
+                font-weight: bold;
+              }
+            }
+          }
+        }//.cont
+      }//&.is_access
+    }//.u-whtBox1
+  }//.u-secCont
+}

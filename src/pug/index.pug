@@ -1,0 +1,27 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    include /_include/_head.pug
+
+  body
+    .l-wrapper
+      main.l-cont
+        article.mainZone
+          include /_index_cont/_main.pug
+
+        article.newsZone
+          include /_index_cont/_news.pug
+
+        article.menuZone
+          include /_index_cont/_menu.pug
+
+        article.infoZone
+          include /_index_cont/_info.pug
+
+      .l-fixBtns
+        a(href=""): +img("btn_reserve.svg", "ご予約")
+        a(href=""): +img("btn_inquiry.svg", "お問合せ")
+
+      include /_include/_footer.pug
