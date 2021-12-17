@@ -95,8 +95,16 @@ $innerW2: 1200;
       padding-top: 75px;
     }
     @include mq{
+      margin-bottom: vw(-70);
+      padding-top: vw(60);
+      padding-bottom: vw(100);
     }
   }//&secTtl
+  &secCont{
+    @include mq{
+      padding-bottom: vw(50);
+    }
+  }//&secCont
 
 
   /* インナー */
@@ -129,6 +137,11 @@ $innerW2: 1200;
   /* タイトル */
   &ttl1{
     text-align: center;
+    img{
+      @include mq{
+        width: vw(151);
+      }
+    }
   }
   &ttl2{
     color: #62462C;
@@ -218,6 +231,13 @@ $innerW2: 1200;
       border-radius: 35px;
     }
     @include mq{
+      padding: vw(20);
+      border-radius: vw(15);
+    }
+    + .u-whtBox1{
+      @include mq{
+        margin-top: vw(30);
+      }
     }
   }
 

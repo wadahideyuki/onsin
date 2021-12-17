@@ -31,14 +31,23 @@ article:not(.#{$name}Zone){
       @include pc{
         margin-bottom: 64px;
       }
+      @include mq{
+        margin-bottom: vw(30);
+      }
       > li{
         position: relative;
         @include pc{
           width: vwL(413);
         }
+        @include mq{
+          width: 30%;
+        }
         + li{
           @include pc{
             margin-left: vwL(34);
+          }
+          @include mq{
+            margin-left: 3%;
           }
         }
         figure{
@@ -48,6 +57,7 @@ article:not(.#{$name}Zone){
               border-radius: vwL(15);
             }
             @include mq{
+              border-radius: vw(15);
             }
           }
         }
@@ -59,6 +69,11 @@ article:not(.#{$name}Zone){
           bottom: em(24/23);
           left: em(38/23);
           @include mqMaxW(900px){
+          }
+          @include mq{
+            font-size: 2.0rem;
+            bottom: vw(10);
+            left: vw(10);
           }
           small{
             display: block;
@@ -89,18 +104,19 @@ article:not(.#{$name}Zone){
       }
       + .u-whtBox1{
         @include pc{
-          margin-top: 66px;
-        }
-        @include mq{
+          margin-top: percentage(41/922);
         }
       }
       h3{
         flex-shrink: 0;
-        position: relative;
+        font-size: 3.0rem;
         @include pc{
-          font-size: 3.0rem;
+          position: relative;
         }
         @include mq{
+          display: flex;
+          align-items: center;
+          margin-bottom: vw(20);
         }
         &:before{
           background-image: url($thisPath + "icn_circle.png");
@@ -109,21 +125,22 @@ article:not(.#{$name}Zone){
           @include pc{
           }
           @include mq{
+            margin-right: vw(10);
           }
         }
         span{
-          position: absolute;
-          top: em(18/30);
-          left: em(25/30);
           @include pc{
+            position: absolute;
+            top: em(18/30);
+            left: em(25/30);
           }
           @include mq{
           }
           em{
-            -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
-            letter-spacing: 0.2em;
             @include pc{
+              -ms-writing-mode: tb-rl;
+              writing-mode: vertical-rl;
+              letter-spacing: 0.2em;
             }
             @include mq{
             }
@@ -131,9 +148,13 @@ article:not(.#{$name}Zone){
         }
       }
       .cont{
-        width: 100%;
-        font-size: 1.6rem;
         line-height: (28/16);
+        @include pc{
+          width: 100%;
+          font-size: 1.6rem;
+        }
+        @include mq{
+        }
         p{
           
         }
@@ -178,9 +199,9 @@ article:not(.#{$name}Zone){
           }
         }
         .cont{
-          display: flex;
-          align-items: flex-start;
           @include pc{
+            display: flex;
+            align-items: flex-start;
             padding-top: 12px;
           }
           @include mq{

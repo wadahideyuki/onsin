@@ -16,11 +16,13 @@
 .l-fixBtns{
   display: flex;
   position: fixed;
-  bottom: 10px;
-  right: 40px;
   @include pc{
+    bottom: 10px;
+    right: 40px;
   }
   @include mq{
+    bottom: vw(10);
+    right: vw(10);
   }
   a{
     display: block;
@@ -28,12 +30,14 @@
     @include pc{
     }
     @include mq{
+      width: vw(80);
     }
     + a{
       @include pc{
         margin-left: 15px;
       }
       @include mq{
+        margin-left: vw(15);
       }
     }
   }
@@ -41,9 +45,14 @@
 
 
 .l-footer{
-  padding: 28px 50px;
-  font-size: 1.2rem;
+  padding: em(28/12) em(50/12);
   text-align: center;
+  @include pc{
+    font-size: 1.2rem;
+  }
+  @include mq{
+    font-size: 2.0rem;
+  }
 }
 
 

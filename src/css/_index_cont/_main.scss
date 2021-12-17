@@ -21,9 +21,9 @@ article:not(.#{$name}Zone){
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
+    height: 100vh;
     @include pc{
 //      height: 998px;
-      height: 100vh;
     }
     @include mq{
     }
@@ -33,18 +33,28 @@ article:not(.#{$name}Zone){
     &.is_logo{
       background-image: url($thisPath + "bg_wrap.png");
       h1{
-        width: percentage(364/700);
         @include pc{
+          width: percentage(364/700);
           max-width: 364px;
+        }
+        img{
+          @include mq{
+            width: vw(240);
+          }
         }
       }
     }//&.is_logo
     &.is_catch{
       background-image: url($thisPath + "bg_wrap2.png");
       h2{
-        width: percentage(433/700);
         @include pc{
+          width: percentage(433/700);
           max-width: 433px;
+        }
+        img{
+          @include mq{
+            width: vw(260);
+          }
         }
       }
     }//&.is_catch

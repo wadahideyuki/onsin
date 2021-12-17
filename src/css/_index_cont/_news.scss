@@ -16,31 +16,31 @@ article:not(.#{$name}Zone){
     padding: 25px 50px;
   }
   @include mq{
+    padding: vw(25);
   }
   dl{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     @include pc{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.6rem;
     }
     @include mq{
+      font-size: 2.4rem;
+      text-align: center;
     }
   }
   dt{
     color: #C6AC91;
-    font-size: 1.8rem;
+    font-size: em(18/16);
     font-weight: bold;
     @include pc{
       margin-right: 36px;
     }
     @include mq{
+      margin-bottom: vw(10);
     }
   }
   dd{
-    font-size: 1.6rem;
-    @include pc{
-    }
-    @include mq{
-    }
   }
 }

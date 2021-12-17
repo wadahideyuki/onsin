@@ -29,18 +29,20 @@ article:not(.#{$name}Zone){
         margin-bottom: 50px;
       }
       @include mq{
+        margin-bottom: vw(30);
       }
     }
     .lead{
-      font-size: 2.0rem;
-      text-align: center;
       line-height: (37/20);
       @include pc{
+        font-size: 2.0rem;
+        text-align: center;
       }
       @include mqMaxW(900px){
         font-size: 1.8rem;
       }
       @include mq{
+        font-size: 2.4rem;
       }
     }
   }//.u-secTtl
@@ -63,17 +65,15 @@ article:not(.#{$name}Zone){
         @include pc{
           margin-top: percentage(66/$innerW);
         }
-        @include mq{
-        }
       }
       h3{
         display: flex;
         align-items: center;
+        margin-bottom: em(42/32);
+        padding-bottom: em(16/32);
+        font-size: 3.2rem;
         border-bottom: 1px solid #D6C3AE;
         @include pc{
-          margin-bottom: em(42/32);
-          padding-bottom: em(16/32);
-          font-size: 3.2rem;
         }
         @include mq{
         }
@@ -81,8 +81,11 @@ article:not(.#{$name}Zone){
           background-image: url($thisPath + "icn_circle.png");
           width: em(82/32);
           height: em(82/32);
-          margin-right: em(25/32);
           @include pc{
+            margin-right: em(25/32);
+          }
+          @include mq{
+            margin-right: vw(10);
           }
         }
       }
@@ -103,6 +106,7 @@ article:not(.#{$name}Zone){
                 margin-top: 40px;
               }
               @include mq{
+                margin-top: vw(20);
               }
             }
             figure{
@@ -117,6 +121,11 @@ article:not(.#{$name}Zone){
               left: em(40/18);
               @include pc{
                 font-size: 1.8rem;
+              }
+              @include mq{
+                font-size: 2.4rem;
+                bottom: vw(10);
+                left: vw(10);
               }
               span{
                 display: inline-block;
@@ -145,8 +154,10 @@ article:not(.#{$name}Zone){
       &.is_drink{
         .list{
           > li{
-            display: flex;
-            align-items: center;
+            @include pc{
+              display: flex;
+              align-items: center;
+            }
             + li{
               border-top: 1px dashed #D6C3AE;
               @include pc{
@@ -154,6 +165,8 @@ article:not(.#{$name}Zone){
                 padding-top: 40px;
               }
               @include mq{
+                margin-top: vw(40);
+                padding-top: vw(40);
               }
             }
             figure{
@@ -168,35 +181,30 @@ article:not(.#{$name}Zone){
               }
             }
             .txts{
-              width: 100%;
               @include pc{
+                width: 100%;
                 font-size: 1.8rem;
                 line-height: (28/18);
               }
               @include mq{
+                margin-top: vw(20);
+                font-size: 2.4rem;
               }
               h4{
-                margin-bottom: em(20/18);
                 color: #62462C;
                 font-weight: bold;
                 @include pc{
+                  margin-bottom: em(20/18);
                 }
                 @include mq{
+                  margin-bottom: vw(20);
                 }
                 em{
                   display: block;
-                  @include pc{
-                    font-size: em(22/18);
-                  }
-                  @include mq{
-                  }
+                  font-size: em(22/18);
                 }
                 span{
                   display: block;
-                  @include pc{
-                  }
-                  @include mq{
-                  }
                 }
               }
               p{
@@ -214,22 +222,22 @@ article:not(.#{$name}Zone){
                 @include mq{
                 }
                 > li{
+                  padding-right: 3%;
+                  box-sizing: border-box;
+                  &:nth-child(3n + 1){
+                    width: 33%;
+                  }
+                  &:nth-child(3n + 2){
+                    width: 29%;
+                  }
+                  &:nth-child(3n + 3){
+                    width: 35%;
+                    padding-right: 0;
+                  }
+                  &:nth-child(n + 4){
+                    margin-top: em(10/16);
+                  }
                   @include pc{
-                    padding-right: 3%;
-                    box-sizing: border-box;
-                    &:nth-child(3n + 1){
-                      width: 33%;
-                    }
-                    &:nth-child(3n + 2){
-                      width: 29%;
-                    }
-                    &:nth-child(3n + 3){
-                      width: 35%;
-                      padding-right: 0;
-                    }
-                    &:nth-child(n + 4){
-                      margin-top: em(10/16);
-                    }
                   }
                   @include mq{
                   }
@@ -237,10 +245,6 @@ article:not(.#{$name}Zone){
               }
               dl{
                 display: flex;
-                @include pc{
-                }
-                @include mq{
-                }
                 dt{
                   flex-shrink: 0;
                 }
