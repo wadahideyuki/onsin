@@ -12,6 +12,7 @@ var ipad = userAgent.indexOf('ipad') > -1 || userAgent.indexOf('macintosh') > -1
 if(ipad == true){
   //viewportの設定
   $('meta[name="viewport"]').attr("content", "width=1200px");
+  $("body").addClass("ipad");
 }
 
 //SPのみ

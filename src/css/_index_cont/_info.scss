@@ -26,9 +26,9 @@ article:not(.#{$name}Zone){
     @include mq{
     }
     .phts{
-      display: flex;
-      justify-content: center;
       @include pc{
+        display: flex;
+        justify-content: center;
         margin-bottom: 64px;
       }
       @include mq{
@@ -40,14 +40,16 @@ article:not(.#{$name}Zone){
           width: vwL(413);
         }
         @include mq{
-          width: 30%;
+          width: vw(600);
+          margin-left: auto;
+          margin-right: auto;
         }
         + li{
           @include pc{
             margin-left: vwL(34);
           }
           @include mq{
-            margin-left: 3%;
+            margin-top: vw(20);
           }
         }
         figure{
@@ -66,19 +68,25 @@ article:not(.#{$name}Zone){
           font-size: vwL(23);
           font-weight: bold;
           position: absolute;
-          bottom: em(24/23);
-          left: em(38/23);
+          bottom: em(20/23);
+          left: em(24/23);
           @include mqMaxW(900px){
           }
           @include mq{
-            font-size: 2.0rem;
-            bottom: vw(10);
-            left: vw(10);
+            font-size: 2.8rem;
+            line-height: 1.2;
+            bottom: vw(25);
+            left: vw(25);
+            right: vw(25);
           }
           small{
             display: block;
+            margin-top: em(2/19);
             font-size: em(19/23);
             font-variant: normal;
+            @include mq{
+              margin-top: vw(5);
+            }
           }
         }
       }
@@ -101,6 +109,7 @@ article:not(.#{$name}Zone){
           percentage(69/922);
       }
       @include mq{
+        font-size: 2.4rem;
       }
       + .u-whtBox1{
         @include pc{
@@ -156,7 +165,6 @@ article:not(.#{$name}Zone){
         @include mq{
         }
         p{
-          
         }
       }//.cont
       &.is_request{
@@ -197,6 +205,9 @@ article:not(.#{$name}Zone){
           }
           @include mq{
           }
+          .ipad &{
+            margin-right: percentage(45/791);
+          }
         }
         .cont{
           @include pc{
@@ -209,10 +220,13 @@ article:not(.#{$name}Zone){
           figure{
             @include pc{
               width: percentage(428/666);
-              margin-right: percentage(30/666);
+              margin-right: percentage(24/666);
             }
           }
           .txts{
+            @include mq{
+              margin-top: vw(20);
+            }
             p{
               em{
                 font-size: em(18/16);

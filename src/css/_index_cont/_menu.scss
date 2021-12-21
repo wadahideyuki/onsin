@@ -106,7 +106,9 @@ article:not(.#{$name}Zone){
                 margin-top: 40px;
               }
               @include mq{
-                margin-top: vw(20);
+                margin-top: vw(40);
+                padding-top: vw(40);
+                border-top: 1px dashed #D6C3AE;
               }
             }
             figure{
@@ -116,16 +118,15 @@ article:not(.#{$name}Zone){
               }
             }
             .txts{
-              position: absolute;
-              bottom: em(38/18);
-              left: em(40/18);
               @include pc{
                 font-size: 1.8rem;
+                position: absolute;
+                bottom: em(38/18);
+                left: em(40/18);
               }
               @include mq{
+                margin-top: vw(20);
                 font-size: 2.4rem;
-                bottom: vw(10);
-                left: vw(10);
               }
               span{
                 display: inline-block;
@@ -134,17 +135,33 @@ article:not(.#{$name}Zone){
                 color: #fff;
                 font-size: em(22/18);
                 font-weight: bold;
+                @include mq{
+                  margin-bottom: vw(10);
+                }
                 span{
                   background-color: #62462C;
                   padding: em(5/22) em(11/22);
+                  @include pc{
+                  }
+                  @include mq{
+                  }
                 }
               }
               p{
-                margin-top: em(10/18);
                 color: #62462C;
+                @include pc{
+                  margin-top: em(10/18);
+                }
+                @include mq{
+                }
                 span{
-                  background-color: #fff;
                   padding: em(6/18) em(12/18);
+                  @include pc{
+                    background-color: #fff;
+                  }
+                  @include mq{
+                    padding: 0;
+                  }
                 }
               }
             }//.txts
