@@ -1,0 +1,35 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    include /_include/_head.pug
+
+  body
+    .l-wrapper
+      main.l-cont
+        article.newslistZone
+          section.u-secTtl
+            .u-inner
+              h2.u-ttl1: +img("news_ttl.svg", "お知らせ")
+
+          section.u-secCont
+            .u-inner
+              .u-whtBox1.is_course
+                ul.newslist
+                  -for (var i = 1; i <= 2; i++)
+                    li
+                      header.entry-header
+                        .date 2021.00.00
+                        .cate お知らせ
+                      h3.entry-ttl もう暫く休業致します
+                      p.txt1 休業要請は解除されましたが、諸般の事情によりもう暫く休業致します。     ご不便をお掛けして申し訳ございません。   m(_ _)m &n…
+                  li
+                    header.entry-header
+                      .date 2021.00.00
+                      .cate お知らせ
+                    h3.entry-ttl ながいタイトルながいタイトルながいタイトルながいタイトルながいタイトルながいタイトルながいタイトルながいタイトル
+                    p.txt1 ながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキスト
+
+
+      include /_include/_footer.pug

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ メインコンテンツ
+---------------------------------------*/
+
+$name: "newslist";
+$thisPath: $pathImg + $name + "/";
+
+article:not(.#{$name}Zone){
+//  display: none;
+}
+.#{$name}Zone{
+  .u-secTtl{
+    @include pc{
+      margin-bottom: -177px;
+      padding-bottom: 243px;
+    }
+    @include mq{
+    }
+  }//.u-secTtl
+  .u-secCont{
+    @include pc{
+      padding-bottom: 17px;
+    }
+    @include mq{
+    }
+    .u-whtBox1{
+      @include pc{
+        padding:
+          percentage(50/$innerW)
+          percentage(80/$innerW)
+          percentage(75/$innerW);
+      }
+      @include mq{
+      }
+      + .u-whtBox1{
+        @include pc{
+          margin-top: percentage(66/$innerW);
+        }
+      }
+    }
+    .newslist{
+      > li{
+        + li{
+          border-top: 1px dashed #D6C3AE;
+          @include pc{
+            margin-top: 40px;
+            padding-top: 40px;
+          }
+          @include mq{
+            margin-top: vw(40);
+            padding-top: vw(40);
+          }
+        }
+        .entry-header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          @include pc{
+            font-size: 1.6rem;
+          }
+          @include mq{
+            font-size: 2.0rem;
+          }
+          .date{
+            color: #62462C;
+            font-weight: bold;
+            @include pc{
+            }
+            @include mq{
+            }
+          }
+          .cate{
+            background-color: #62462c;
+            padding: 0.5em 1.0em;
+            color: #fff;
+            font-size: em(14/16);
+            @include pc{
+            }
+            @include mq{
+            }
+          }
+        }//.entry-header
+        .entry-ttl{
+          margin: 0.5em 0;
+          color: #62462C;
+          font-weight: bold;
+          @include pc{
+            font-size: 2.4rem;
+          }
+          @include mq{
+            font-size: 3.0rem;
+          }
+        }
+        .txt1{
+          @include pc{
+            font-size: 2.0rem;
+          }
+          @include mq{
+            font-size: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+}//.u-secCont

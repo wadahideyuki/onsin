@@ -42,5 +42,8 @@ article:not(.#{$name}Zone){
     }
   }
   dd{
+    a{
+      @include hvr(0.5);
+    }
   }
 }
