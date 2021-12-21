@@ -54,9 +54,6 @@ article:not(.#{$name}Zone){
           }
         }
         .entry-header{
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
           @include pc{
             font-size: 1.6rem;
           }
@@ -66,20 +63,6 @@ article:not(.#{$name}Zone){
           .date{
             color: #62462C;
             font-weight: bold;
-            @include pc{
-            }
-            @include mq{
-            }
-          }
-          .cate{
-            background-color: #62462c;
-            padding: 0.5em 1.0em;
-            color: #fff;
-            font-size: em(14/16);
-            @include pc{
-            }
-            @include mq{
-            }
           }
         }//.entry-header
         .entry-ttl{
