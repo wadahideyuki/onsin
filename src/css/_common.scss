@@ -252,10 +252,79 @@ $innerW2: 1200;
 
   /* ページャー */
   &pager1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    > ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2.0em;
+      @include pc{
+        font-size: 2.0rem;
+      }
+      @include mq{
+        font-size: 3.0rem;
+      }
+      > li{
+        + li{
+          margin-left: 1.0em;
+        }
+        &.pre + .no,
+        &.nxt{
+          margin-left: 0.5em;
+        }
+        > *{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.4em;
+          height: 2.4em;
+        }
+        span{
+        }
+        a{
+          @include hvr(0.5);
+        }
+        &.arw{
+          a{
+            &:before{
+              content: "";
+              display: block;
+              width: 0.7em;
+              height: 0.7em;
+              border-bottom: 3px solid #62462C;
+              border-right: 3px solid #62462C;
+            }
+          }
+          &.pre{
+            a{
+              &:before{
+                transform: translate(0.15em, 0) rotate(135deg);
+              }
+            }
+          }
+          &.nxt{
+            a{
+              &:before{
+                transform: translate(-0.15em, 0) rotate(-45deg);
+              }
+            }
+          }
+        }//.arw
+        &.no{
+          > *{
+            background-color: #fff;
+            color: #62462C;
+            border-radius: em(10/20);
+          }
+          &.here{
+            > *{
+              background-color: #62462C;
+              color: #fff;
+            }
+          }
+        }//.no
+      }
+    }
+  }//&pager1
 
 
   /* 状態 */
