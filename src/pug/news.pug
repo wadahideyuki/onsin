@@ -30,12 +30,22 @@ html(lang="ja")
                     .entry-cont ながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキストながいテキスト
 
               .u-pager1
-                ul
-                  li.arw.pre: a(href="")
-                  li.no: a(href="") 1
-                  li.no.here: span 2
-                  li.no: a(href="") 3
-                  li.arw.nxt: a(href="")
+                a.prev.page-numbers(href="http://onsn.wadakoubou.com/news/page/4/")
+                a.page-numbers(href="http://onsn.wadakoubou.com/news/")
+                  em.no 1
+                span.page-numbers.dots …
+                a.page-numbers(href="http://onsn.wadakoubou.com/news/page/4/")
+                  em.no 4
+                span.page-numbers.current(aria-current="page")
+                  em.no 5
+                a.page-numbers(href="http://onsn.wadakoubou.com/news/page/6/")
+                  em.no 6
+                span.page-numbers.dots …
+                a.page-numbers(href="http://onsn.wadakoubou.com/news/page/11/")
+                  em.no 11
+                a.next.page-numbers(href="http://onsn.wadakoubou.com/news/page/6/")
+
+
 
 
       include /_include/_footer.pug
