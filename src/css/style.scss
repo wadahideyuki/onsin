@@ -27,6 +27,13 @@
 
 
 
-
+.corseTxt{
+    text-align: center;
+    padding-bottom: 1.5em;
+    @include mq{
+        text-align: left;
+        font-size: 1.4rem;
+    }
+}
 
 
