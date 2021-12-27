@@ -97,181 +97,112 @@ article:not(.#{$name}Zone){
           }
         }
       }
-      &.is_course{
-        .list{
-          > li{
-            position: relative;
-            + li{
+      .list{
+        > li{
+          @include pc{
+            display: flex;
+            align-items: center;
+          }
+          + li{
+            border-top: 1px dashed #D6C3AE;
+            @include pc{
+              margin-top: 34px;
+              padding-top: 40px;
+            }
+            @include mq{
+              margin-top: vw(40);
+              padding-top: vw(40);
+            }
+          }
+          figure{
+            flex-shrink: 0;
+            @include pc{
+              width: percentage(469/940);
+              margin-right: percentage(54/940);
+            }
+            @include mq{
+            }
+            img{
+            }
+          }
+          .txts{
+            @include pc{
+              width: 100%;
+              font-size: 1.8rem;
+              line-height: (28/18);
+            }
+            @include mq{
+              margin-top: vw(20);
+              font-size: 2.4rem;
+            }
+            h4{
+              color: #62462C;
+              font-weight: bold;
               @include pc{
-                margin-top: 40px;
+                margin-bottom: em(20/18);
               }
               @include mq{
-                margin-top: vw(40);
-                padding-top: vw(40);
-                border-top: 1px dashed #D6C3AE;
+                margin-bottom: vw(20);
               }
-            }
-            figure{
-              img{
-                @include pc{
-                }
-              }
-            }
-            .txts{
-              @include pc{
-                font-size: 1.8rem;
-                position: absolute;
-                bottom: em(38/18);
-                left: em(40/18);
-              }
-              @include mq{
-                margin-top: vw(20);
-                font-size: 2.4rem;
+              em{
+                display: block;
+                font-size: em(22/18);
               }
               span{
-                display: inline-block;
+                display: block;
               }
-              h4{
-                color: #fff;
-                font-size: em(22/18);
-                font-weight: bold;
-                @include mq{
-                  margin-bottom: vw(10);
-                }
-                span{
-                  background-color: #62462C;
-                  padding: em(5/22) em(11/22);
-                  @include pc{
-                  }
-                  @include mq{
-                  }
-                }
+            }
+            p{
+              @include pc{
               }
-              p{
-                color: #62462C;
+              @include mq{
+              }
+            }
+            ul{
+              display: flex;
+              flex-wrap: wrap;
+              line-height: 1;
+              @include pc{
+              }
+              @include mq{
+              }
+              > li{
+                padding-right: 3%;
+                box-sizing: border-box;
+                &:nth-child(3n + 1){
+                  width: 33%;
+                }
+                &:nth-child(3n + 2){
+                  width: 29%;
+                }
+                &:nth-child(3n + 3){
+                  width: 35%;
+                  padding-right: 0;
+                }
+                &:nth-child(n + 4){
+                  margin-top: em(10/16);
+                }
                 @include pc{
-                  margin-top: em(10/18);
                 }
                 @include mq{
                 }
-                span{
-                  padding: em(6/18) em(12/18);
-                  @include pc{
-                    background-color: #fff;
-                  }
-                  @include mq{
-                    padding: 0;
-                  }
-                }
               }
-            }//.txts
-          }
-        }//.list
+            }
+            dl{
+              display: flex;
+              dt{
+                flex-shrink: 0;
+              }
+              dd{
+                width: 100%;
+              }
+            }
+          }//.txts
+        }
+      }//.list
+      &.is_course{
       }//&.is_course
       &.is_drink{
-        .list{
-          > li{
-            @include pc{
-              display: flex;
-              align-items: center;
-            }
-            + li{
-              border-top: 1px dashed #D6C3AE;
-              @include pc{
-                margin-top: 34px;
-                padding-top: 40px;
-              }
-              @include mq{
-                margin-top: vw(40);
-                padding-top: vw(40);
-              }
-            }
-            figure{
-              flex-shrink: 0;
-              @include pc{
-                width: percentage(469/940);
-                margin-right: percentage(54/940);
-              }
-              @include mq{
-              }
-              img{
-              }
-            }
-            .txts{
-              @include pc{
-                width: 100%;
-                font-size: 1.8rem;
-                line-height: (28/18);
-              }
-              @include mq{
-                margin-top: vw(20);
-                font-size: 2.4rem;
-              }
-              h4{
-                color: #62462C;
-                font-weight: bold;
-                @include pc{
-                  margin-bottom: em(20/18);
-                }
-                @include mq{
-                  margin-bottom: vw(20);
-                }
-                em{
-                  display: block;
-                  font-size: em(22/18);
-                }
-                span{
-                  display: block;
-                }
-              }
-              p{
-                @include pc{
-                }
-                @include mq{
-                }
-              }
-              ul{
-                display: flex;
-                flex-wrap: wrap;
-                line-height: 1;
-                @include pc{
-                }
-                @include mq{
-                }
-                > li{
-                  padding-right: 3%;
-                  box-sizing: border-box;
-                  &:nth-child(3n + 1){
-                    width: 33%;
-                  }
-                  &:nth-child(3n + 2){
-                    width: 29%;
-                  }
-                  &:nth-child(3n + 3){
-                    width: 35%;
-                    padding-right: 0;
-                  }
-                  &:nth-child(n + 4){
-                    margin-top: em(10/16);
-                  }
-                  @include pc{
-                  }
-                  @include mq{
-                  }
-                }
-              }
-              dl{
-                display: flex;
-                dt{
-                  flex-shrink: 0;
-                }
-                dd{
-                  width: 100%;
-                }
-              }
-            }//.txts
-          }
-        }//.list
       }//&.is_drink
     }//.u-whtBox1
   }//.u-secCont
