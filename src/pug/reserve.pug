@@ -1,0 +1,35 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    include /_include/_head.pug
+
+
+  body
+    .l-wrapper
+      h1.onsnTop 
+        a(href="/")
+          +img("main/logo.svg", "穏心")
+      main.l-cont
+        article.newslistZone
+          section.u-secTtl
+            .u-inner
+              h2.u-ttl1: +img("reserve_ttl.svg", "ご予約")
+
+          section.u-secCont
+            .u-inner
+              .u-whtBox1.is_course
+                script(charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js')
+                script.
+                  hbspt.forms.create({
+                  region: "na1",
+                  portalId: "20669384",
+                  formId: "8aa74789-d9a0-433b-90f4-ea415713b575"
+                  });
+
+                p.txtRed ご予約はまだ確定ではございません、可否のご連絡をお待ちくださいませ。
+
+
+
+      include /_include/_footer.pug

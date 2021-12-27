@@ -1,0 +1,30 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    include /_include/_head.pug
+
+
+  body
+    .l-wrapper
+      h1.onsnTop 
+        a(href="/")
+          +img("main/logo.svg", "穏心")
+      main.l-cont
+        article.newslistZone
+          section.u-secTtl
+            .u-inner
+              h2.u-ttl1: +img("contact_ttl.svg", "お問い合わせ")
+
+          section.u-secCont
+            .u-inner
+              .u-whtBox1.is_course
+                script(charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/shell.js')
+                script.
+                  hbspt.forms.create({
+                  region: "na1",
+                  portalId: "20669384",
+                  formId: "9cd3710a-d644-4945-ae36-63c752529618"
+                  });
+      include /_include/_footer.pug

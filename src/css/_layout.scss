@@ -11,7 +11,20 @@
 .l-cont{
   
 }
-
+.onsnTop{
+  position: absolute;
+  width: 150px;
+  left: 0px;
+  top: 0px;
+  background-color: #FFF;
+  border-radius: 0 0 10px 0px;
+  box-sizing: border-box;
+  padding: 20px;
+  @include mq{
+    width: 20vw;
+    padding: 3vw;
+  }
+}
 
 .l-fixBtns{
   display: flex;

@@ -137,6 +137,8 @@ $innerW2: 1200;
   /* タイトル */
   &ttl1{
     text-align: center;
+    width: 152px;
+    margin: 0 auto;
     img{
       @include mq{
         width: vw(151);
@@ -455,4 +457,9 @@ $innerW2: 1200;
     padding: 5px;
     color: #FFF;
   }
+}
+.txtRed{
+  text-align: center;
+  color: red;
+  font-weight: bold;
 }
