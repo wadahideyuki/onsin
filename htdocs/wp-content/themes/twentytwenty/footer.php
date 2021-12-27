@@ -15,7 +15,7 @@
 
 
   </main><!-- /.l-cont -->
-  <div class="l-fixBtns"><a href="/reserve.html"><img src="/common/img/btn_reserve.svg" alt="ご予約"/></a><a href="/inquiry.html"><img src="/common/img/btn_inquiry.svg" alt="お問合せ"/></a></div>
+  <div class="l-fixBtns"><a href="/reserve.html"><img src="/common/img/btn_reserve.svg" alt="ご予約"/></div>
   <footer class="l-footer">©Copyright2022 穏心.All Rights Reserved.</footer>
 </div><!-- /.l-wrapper -->
 

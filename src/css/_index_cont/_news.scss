@@ -25,19 +25,20 @@ article:not(.#{$name}Zone){
       font-size: 1.6rem;
     }
     @include mq{
-      font-size: 2.4rem;
-      text-align: center;
+      font-size: 2.0rem;
     }
   }
   dt{
     color: #C6AC91;
-    font-size: em(18/16);
     font-weight: bold;
     @include pc{
       margin-right: 36px;
+      font-size: em(18/16);
     }
     @include mq{
       margin-bottom: vw(10);
+      font-size: 2.8rem;
+      text-align: center;
     }
   }
   dd{

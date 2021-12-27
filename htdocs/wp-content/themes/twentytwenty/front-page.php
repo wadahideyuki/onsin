@@ -30,7 +30,7 @@ get_header();
 
 <?php
   $args = array(
-    'posts_per_page' => 1 // 表示件数の指定
+    'posts_per_page' => 3 // 表示件数の指定
   );
   $posts = get_posts($args);
   if ($posts) :
@@ -43,16 +43,19 @@ get_header();
           foreach ($posts as $post): // ループの開始
           setup_postdata($post); // 記事データの取得
         ?>
-          <a href="/news/">
-            <span class="date"><?php echo get_the_date('Y/m/d'); ?></span>
-            <?php the_title(); ?>
-          </a>
+          <p>
+            <a href="/news/">
+              <span class="date"><?php echo get_the_date('Y/m/d'); ?></span>
+              <?php the_title(); ?>
+            </a>
+          </p>
         <?php
           endforeach; // ループの終了
           wp_reset_postdata(); // 直前のクエリを復元する
         ?>
       </dd>
     </dl>
+    <div class="more"><a href="/news/">詳しくはこちら</a></div>
   </article>
 <?php endif; ?>
 
