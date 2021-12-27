@@ -33,6 +33,12 @@
 		@content;
 	}
 }
+//PCのブレイクポイント
+@mixin mqM {
+	@media screen and (max-width: px($pcBP)) {
+		@content;
+	}
+}
 //PC幅の時
 @mixin pc {
 	@media screen and (min-width: px($breakPoint + 1)) {

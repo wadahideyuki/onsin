@@ -7,6 +7,7 @@ $pathImg: "../img/";
 //切替
 $pcDesign: 1400;
 $spDesign: 640;
+$pcBP: 1200;
 $breakPoint: 767;
 $tabBP: 1024;
 
@@ -46,8 +47,11 @@ $fwBlk:900;
 @function vw($suuji){
 	@return ($suuji / $spDesign) * 100vw;
 }
-@function vwL($suuji){//PC幅の時
+@function vwL($suuji){//PCデザイン幅の時
 	@return ($suuji / $pcDesign) * 100vw;
+}
+@function vwM($suuji){//PC幅の時
+	@return ($suuji / $pcBP) * 100vw;
 }
 @function vwT($suuji){//タブレット幅の時
 	@return ($suuji / $tabBP) * 100vw;
