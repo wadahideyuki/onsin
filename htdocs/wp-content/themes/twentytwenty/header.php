@@ -16,7 +16,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <?php wp_head(); ?>
-  <link href="/common/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="/common/css/style.css?12" rel="stylesheet" type="text/css" media="all"/>
   <script src="/common/js/jquery-1.11.1.min.js" type="text/javascript"></script>
   <script src="/common/js/slick.min.js" type="text/javascript"></script>
   <script src="/common/js/common.js" type="text/javascript"></script>

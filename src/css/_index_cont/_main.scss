@@ -7,13 +7,16 @@
 $name: "main";
 $thisPath: $pathImg + $name + "/";
 
-article:not(.#{$name}Zone){
-//  display: none;
+article:not(.#{$name}Zone) {
+  //  display: none;
 }
-.#{$name}Zone{
+.#{$name}Zone {
   display: flex;
   flex-direction: row-reverse;
-  .box{
+  @include mq {
+    flex-direction: column;
+  }
+  .box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,41 +25,55 @@ article:not(.#{$name}Zone){
     background-size: cover;
     width: 50%;
     height: 100vh;
-    @include pc{
-//      height: 998px;
+    @include pc {
+      //      height: 998px;
     }
-    @include mq{
+    @include mq {
+      height: 70vh;
+      width: 100%;
     }
-    img{
+    img {
       max-width: 100%;
     }
-    &.is_logo{
+    &.is_logo {
       background-image: url($thisPath + "bg_wrap.png");
-      h1{
-        @include pc{
-          width: percentage(364/700);
-          max-width: 364px;
+      h1 {
+        margin-right: auto;
+        margin-left: 13%;
+        margin-bottom: 13%;
+        margin-top: auto;
+        width: 49%;
+        @include pc {
+    max-width: 300px;
         }
-        img{
-          @include mq{
-            width: vw(240);
+        @include mq{
+          width: 100%;
+          margin-left: 10%;
+          margin-bottom: 13%;
+        }
+        img {
+          @include mq {
+            width: 40%;
           }
         }
       }
-    }//&.is_logo
-    &.is_catch{
+    } //&.is_logo
+    &.is_catch {
       background-image: url($thisPath + "bg_wrap2.png");
-      h2{
-        @include pc{
+      h2 {
+        @include pc {
           width: percentage(433/700);
           max-width: 433px;
         }
-        img{
-          @include mq{
-            width: vw(260);
+        @include mq{
+          text-align: center;
+        }
+        img {
+          @include mq {
+            width: 80%;
           }
         }
       }
-    }//&.is_catch
+    } //&.is_catch
   }
 }

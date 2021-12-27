@@ -54,10 +54,7 @@ article:not(.#{$name}Zone){
     }
     .u-whtBox1{
       @include pc{
-        padding:
-          percentage(50/$innerW)
-          percentage(80/$innerW)
-          percentage(75/$innerW);
+        padding:40px;
       }
       @include mq{
       }

@@ -231,6 +231,11 @@ article:not(.#{$name}Zone){
               em{
                 font-size: em(18/16);
                 font-weight: bold;
+                @include mq{
+                  a{
+                    text-decoration: underline;
+                  }
+                }
               }
             }
           }
