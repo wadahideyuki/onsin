@@ -43,7 +43,7 @@
     @include pc{
     }
     @include mq{
-      width: vw(80);
+      width: 17vw;
     }
     + a{
       @include pc{

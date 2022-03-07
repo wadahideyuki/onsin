@@ -112,7 +112,7 @@ $innerW2: 1200;
     margin-left: auto;
     margin-right: auto;
     @include pc{
-      max-width: px($innerW);
+      max-width: 922px;
     }
     &.sz2{
       @include pc{
@@ -462,4 +462,8 @@ $innerW2: 1200;
   text-align: center;
   color: red;
   font-weight: bold;
+  @include mq{
+    font-size: 2.6rem;
+    padding-bottom: 8vw;
+  }
 }

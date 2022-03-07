@@ -5,7 +5,7 @@ Template Name: news
 
 get_header();
 ?>
-
+<h1 class="onsnTop"> <a href="/"><img src="/common/img/main/logo.svg" alt="穏心"></a></h1>
 <article class="newslistZone">
   <section class="u-secTtl">
     <div class="u-inner">
@@ -29,7 +29,7 @@ get_header();
             if ($the_query->have_posts()) :
               while ($the_query->have_posts()) : $the_query->the_post();
           ?>
-            <li>
+            <li id="<?php the_ID(); ?>">
               <header class="entry-header">
                 <div class="date"><?php echo get_the_date('Y/m/d'); ?></div>
               </header>
@@ -42,6 +42,26 @@ get_header();
           ?>
         </ul>
       </div>
+
+      <div class="btnBack">
+        <style> 
+      .btnBack{
+        text-align: center;
+        padding: 20px 0;
+      }
+      .btnBack a{
+        background: #000;
+        color: #FFF;
+        display: inline-block;
+        padding: .5em 1em;
+        font-size: 1.8rem;
+        border-radius: 50px;
+
+        text-align: center;
+      }
+      
+      </style>
+      <a href="/">TOPページに戻る</a></div>
       <div class="u-pager1">
         <?php
           if ($the_query->max_num_pages > 1) {

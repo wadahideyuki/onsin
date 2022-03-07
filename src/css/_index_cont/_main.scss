@@ -39,10 +39,10 @@ article:not(.#{$name}Zone) {
       background-image: url($thisPath + "bg_wrap.png");
       h1 {
         margin-right: auto;
-        margin-left: 13%;
-        margin-bottom: 13%;
+        margin-left: 10%;
+        margin-bottom: 10%;
         margin-top: auto;
-        width: 49%;
+        width: 39%;
         @include pc {
     max-width: 300px;
         }
@@ -59,11 +59,11 @@ article:not(.#{$name}Zone) {
       }
     } //&.is_logo
     &.is_catch {
-      background-image: url($thisPath + "bg_wrap2.png");
+      background-image: url($thisPath + "bg_wrap2.jpg");
       h2 {
         @include pc {
           width: percentage(433/700);
-          max-width: 433px;
+          max-width: 500px;
         }
         @include mq{
           text-align: center;

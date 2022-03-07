@@ -801,7 +801,7 @@ add_action('wp_enqueue_scripts', function() {
 }, 20);
 
 // 記事の自動整形を無効化
-remove_filter('the_content', 'wpautop');
+// remove_filter('the_content', 'wpautop');
 
 /**
  * ビジュアルエディタに切り替えで、空の span タグや i タグが消されるのを防止

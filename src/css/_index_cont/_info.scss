@@ -28,28 +28,29 @@ article:not(.#{$name}Zone){
     .phts{
       @include pc{
         display: flex;
-        justify-content: center;
-        margin-bottom: 64px;
+        justify-content: space-between;
+        max-width: 922px;
+        margin: 0 auto 30px;
       }
       @include mq{
+        display: flex;
         margin-bottom: vw(30);
+        justify-content: flex-start;
+        overflow-x: auto;
       }
       > li{
         position: relative;
         @include pc{
-          width: vwL(413);
+          width: 32%;
         }
         @include mq{
-          width: vw(600);
-          margin-left: auto;
-          margin-right: auto;
+          width: 70vw;
+          flex-shrink: 0;
+          margin: 0  0 0 3vw;
         }
         + li{
           @include pc{
-            margin-left: vwL(34);
-          }
-          @include mq{
-            margin-top: vw(20);
+
           }
         }
         figure{
@@ -82,7 +83,7 @@ article:not(.#{$name}Zone){
           small{
             display: block;
             margin-top: em(2/19);
-            font-size: em(19/23);
+            font-size: .6em;
             font-variant: normal;
             @include mq{
               margin-top: vw(5);
@@ -180,6 +181,7 @@ article:not(.#{$name}Zone){
             padding-top: 15px;
           }
           @include mq{
+            font-size: 0.9em;
           }
           p{
           }

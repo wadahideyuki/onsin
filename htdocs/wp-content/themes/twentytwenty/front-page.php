@@ -19,18 +19,18 @@ get_header();
 
 <article class="mainZone">
   <div class="box is_logo">
-    <h1><img src="/common/img/main/logo.svg" alt="穏心 on-shin 和朴想"/>
+    <h1><img src="/common/img/main/logo.svg?20220105" alt="穏心 on-shin 和朴想"/>
     </h1>
   </div>
   <div class="box is_catch">
-    <h2><img src="/common/img/main/catch.svg" alt="穏心 穏やかな心で 和 和を大切に 朴 飾らず自然に 想 想いを込めて淡々と"/>
+    <h2><img src="/common/img/main/catch.svg?2022" alt="穏心 穏やかな心で 和 和を大切に 朴 飾らず自然に 想 想いを込めて淡々と"/>
     </h2>
   </div>
 </article>
 
 <?php
   $args = array(
-    'posts_per_page' => 3 // 表示件数の指定
+    'posts_per_page' => 5 // 表示件数の指定
   );
   $posts = get_posts($args);
   if ($posts) :
@@ -44,7 +44,7 @@ get_header();
           setup_postdata($post); // 記事データの取得
         ?>
           <p>
-            <a href="/news/">
+            <a href="/news/#<?php the_ID(); ?>">
               <span class="date"><?php echo get_the_date('Y/m/d'); ?></span>
               <?php the_title(); ?>
             </a>

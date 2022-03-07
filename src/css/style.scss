@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
-@import "_config/reset";//リセット
+@import "_config/reset"; //リセット
 
 //プラグイン
 @import "_plugin/slick";
@@ -9,8 +9,8 @@
 @import "_plugin/animate";
 
 //共通
-@import "layout";//全体的なレイアウト(ヘッダーとか)
-@import "common";//パーツ(ボタンなど)
+@import "layout"; //全体的なレイアウト(ヘッダーとか)
+@import "common"; //パーツ(ボタンなど)
 
 //コンテンツ別
 @import "_index_cont/main";
@@ -21,19 +21,27 @@
 //ページ
 @import "_page/newslist";
 
+@import "_plugin/class"; //単独クラス
 
-@import "_plugin/class";//単独クラス
-
-
-
-
-.corseTxt{
-    text-align: center;
-    padding-bottom: 1.5em;
-    @include mq{
+.corseTxt {
+  text-align: center;
+  margin-bottom: 15px;
+  p{
+    padding-bottom: 5px;
+  }
+  ul {
+    li {
+      padding: 2px 0;
+      text-align: center;
+      @include mq{
         text-align: left;
-        font-size: 1.4rem;
+        text-indent: -1em;
+        margin-left: 1em;
+      }
     }
+  }
+  @include mq {
+    text-align: left;
+    font-size: 2.2rem;
+  }
 }
-
-

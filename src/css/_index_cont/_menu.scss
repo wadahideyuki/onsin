@@ -66,10 +66,17 @@ article:not(.#{$name}Zone){
       h3{
         display: flex;
         align-items: center;
-        margin-bottom: em(42/32);
         padding-bottom: em(16/32);
         font-size: 3.2rem;
-        border-bottom: 1px solid #D6C3AE;
+        flex-wrap: wrap;
+        em{
+          font-size: 1.6rem;
+          margin-left: 1.5em;
+          @include mq{
+            font-size: 2.4rem;
+            margin-left: 0px;
+          }
+        }
         @include pc{
         }
         @include mq{
@@ -109,6 +116,8 @@ article:not(.#{$name}Zone){
         }
       }
       .list{
+        border-top: 1px solid #D6C3AE;
+        padding-top: 2em;
         > li{
           @include pc{
             display: flex;
